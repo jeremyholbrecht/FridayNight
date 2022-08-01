@@ -63,7 +63,9 @@ public class Customer {
 
     public boolean feelingConfident(){
         //check if they drank more than 5 beers and if they have a condom
-        return false;
+        if(getBeersThatTheyDrunk() > 5 && isHasCondom()){
+            return true;
+        } return false;
     }
 
     public int tipTheCuteStaff(Staff staff){
@@ -72,6 +74,16 @@ public class Customer {
         //check if you have enough money. If the amount is too low,
         //only give the amount that you have left
         //return the amount of money you have left
-        return 0;
+        int idealTip = (int) (getBeersThatTheyDrunk()*tippingAmount);
+        int actualTip = 0;
+        while(getBeersThatTheyDrunk()>0){
+            if(getEuros() > idealTip){
+                 actualTip = idealTip;
+                setEuros(getEuros()-actualTip);
+            } actualTip = (int) getEuros();
+            setEuros(getEuros()-actualTip);
+        }
+
+        return (int) getEuros();
     }
 }
