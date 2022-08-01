@@ -18,7 +18,7 @@ public class ToiletMan extends Staff {
 
 
 
-    private void fillToiletStallsWithToiletPaper(int amountOfStalls) throws outOfToiletPaperException {
+    public void fillToiletStallsWithToiletPaper(int amountOfStalls) throws outOfToiletPaperException {
         //remove the amount of your stock
         //this method will throw a selfmade Exception if you're
         //out of toilet paper
@@ -31,7 +31,7 @@ public class ToiletMan extends Staff {
 
     }
 
-    private void promoteSafeFun(Customer customer){
+    public void promoteSafeFun(Customer customer){
         //check if he has no condom
         //AND if he had less than 3 drinks
         //give them a condom
