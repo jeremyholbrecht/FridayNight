@@ -31,7 +31,7 @@ public class BarTender extends Staff{
 
     public void buyBeer(Customer customer, int amount){
         if(customer.getEuros() >= getBeerPrice() * amount) {
-            customer.setBeersThatTheyDrunk(amount);
+            customer.setBeersThatTheyDrunk(customer.getBeersThatTheyDrunk()+amount);
             double priveEuro = beerPrice * amount;
 
 

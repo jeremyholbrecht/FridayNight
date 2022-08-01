@@ -8,6 +8,7 @@ public class BouncerTest {
     private static Customer ofAgeCustomer;
     private static Bouncer bouncer;
 
+
     @BeforeClass
     public static void makeCustomer(){
         underAgeCustomer = new Customer("name", 15, 30, true);
