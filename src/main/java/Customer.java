@@ -76,14 +76,18 @@ public class Customer {
         //return the amount of money you have left
         int idealTip = (int) (getBeersThatTheyDrunk()*tippingAmount);
         int actualTip = 0;
-        while(getBeersThatTheyDrunk()>0){
+
             if(getEuros() > idealTip){
                  actualTip = idealTip;
                 setEuros(getEuros()-actualTip);
-            } actualTip = (int) getEuros();
+                staff.setAmountsOfTips(actualTip + staff.getAmountsOfTips());   return (int)euros;
+            }
+            actualTip = (int) getEuros();
             setEuros(getEuros()-actualTip);
-        }
 
+        staff.setAmountsOfTips(actualTip + staff.getAmountsOfTips());
         return (int) getEuros();
+
+
     }
 }
